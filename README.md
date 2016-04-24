@@ -1,4 +1,4 @@
 # mobileCloudClass
-This is mobile cloud Class project.
-First. Simply Calculator<br>
-Second. Simple phone call
+This is mobile cloud Class project.<br>
+First. Simply Calculator.<br>
+Second. Simple phone call. <br>
