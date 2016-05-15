@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<resources>
+    <string name="app_name">TourApp</string>
+
+
+    <string name="login_login">Login</string>
+    <string name="login_id">ID</string>
+    <string name="login_password">Password</string>
+    <string name="login_join">Join</string>
+
+    <string name="join_main">Join</string>
+    <string name="join_id">ID</string>
+    <string name="join_password">Password</string>
+    <string name="join_name">NickName</string>
+    <string name="join_list">Prefered Tour Places</string>
+    <string name="join_join">Submit</string>
+
+    <string name="main_tourlist">Tour List</string>
+
+    <string name="information_name">Name</string>
+    <string name="title_activity_maps">Map</string>
+
+
+</resources>

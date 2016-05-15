@@ -1,0 +1,297 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_layout_header_height"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/activity_layout_header_margin"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_layout_header_padding"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <!-- android:padding="@color/activity_layout_header_background" -->
+
+    <LinearLayout
+        android:id="@+id/ll_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/activity_layout_body_margin"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_layout_body_padding" >
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_margin="@dimen/activity_layout_left_margin"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_layout_left_padding"
+            android:visibility="gone" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_center"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_margin="@dimen/activity_layout_center_margin"
+            android:layout_weight="2"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_layout_center_padding" >
+
+            <!-- content start -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_join_id"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight = "1"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/join_id"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/et_join_id"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight ="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:hint="input ID"
+                        android:imeOptions="actionNext"
+                        android:singleLine = "true"
+                        android:lines = "1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_join_idcheck"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight = "1"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_join_password"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight = "1"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/join_password"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/et_join_password"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight ="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:hint="input password"
+                        android:password="true"
+                        android:imeOptions="actionNext"
+                        android:singleLine = "true"
+                        android:lines = "1"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight = "1"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width = "match_parent"
+                    android:layout_height = "50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_join_name"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight = "1"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/join_name"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/et_join_name"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight ="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:hint="input ID"
+                        android:imeOptions="actionNext"
+                        android:singleLine = "true"
+                        android:lines = "1"
+                        />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight = "1"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" >
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width = "fill_parent"
+                    android:layout_height = "50dp"
+                    android:orientation="horizontal">
+                    <CheckBox
+                    android:id="@+id/checkbox1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="Paris"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkbox2"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Tokyo"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkbox3"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Rome"
+                        />
+                    <CheckBox
+                        android:id="@+id/checkbox4"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="Kookmin Univ"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width = "fill_parent"
+                    android:layout_height = "50dp"
+                    android:orientation="horizontal"
+                    >
+                    <Button
+                        android:id="@+id/btn_join_submit"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight = "1"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/join_join"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:textStyle="bold">
+                    </Button>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- content end -->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:layout_margin="@dimen/activity_layout_right_margin"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_layout_right_padding"
+            android:visibility="gone" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_layout_footer_height"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/activity_layout_footer_margin"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_layout_footer_padding" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="15sp" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>
