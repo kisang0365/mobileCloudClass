@@ -6,6 +6,8 @@ import android.os.Bundle;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -20,7 +22,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
 
 
     }
@@ -38,6 +39,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.addMarker(new MarkerOptions()
+          .position(new LatLng(10.123,10.123))
+                .title("Hello world1"));
+        mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(11,10.123))
+                .title("Hello world2"));
+
 
         // Add a marker in Sydney and move the camera
        //LatLng sydney = new LatLng(data.getLat(data.getViewPoint()), data.getLng(data.getViewPoint()));
