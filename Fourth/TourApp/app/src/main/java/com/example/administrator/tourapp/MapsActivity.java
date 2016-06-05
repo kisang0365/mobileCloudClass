@@ -2,7 +2,10 @@ package com.example.administrator.tourapp;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.util.Log;
 
+import com.example.administrator.tourapp.helper.Helper_log;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -39,17 +42,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.addMarker(new MarkerOptions()
-          .position(new LatLng(10.123,10.123))
-                .title("Hello world1"));
-        mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(11,10.123))
-                .title("Hello world2"));
+        Helper_log log = Helper_log.getInstance();
+
+        for(int i=0; i<log.lat.size(); i++){
+            LatLng sydney = new LatLng(log.lat.get(i),log.lng.get(i));
+            mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"+i));
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,19));
+        }
+//        mMap.addMarker(new MarkerOptions()
+////                .position(new LatLng(11,10.123))
+////                .title("Hello world2"));
 
 
         // Add a marker in Sydney and move the camera
-       //LatLng sydney = new LatLng(data.getLat(data.getViewPoint()), data.getLng(data.getViewPoint()));
-        //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
     }
 }
