@@ -31,6 +31,7 @@ public class Activity_main extends AppCompatActivity {
     TextView tv;
     Helper_log log = new Helper_log();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
